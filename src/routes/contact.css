@@ -1,0 +1,142 @@
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .address,
+  .small,
+  .map,
+  .form-container {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+  .map {
+    flex: 1 1 50%; 
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; 
+    margin-bottom: 20px; 
+  }
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+.contact-heading {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.address {
+  flex: 1 1 50%;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+.small {
+  flex: 1 1 20%;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+.map {
+  flex: 1 1 50%;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-container {
+  flex: 1 1 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 48%;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #F5BF23;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  
+  color: white;
+}
+
+.icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.info-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info-details {
+  margin-bottom: 10px;
+}
+
+/* Animation keyframes */
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-from-bottom {
+  animation: slideFromBottom 0.5s ease forwards;
+}

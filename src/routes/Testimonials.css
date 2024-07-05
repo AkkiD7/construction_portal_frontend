@@ -1,0 +1,9 @@
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+  filter: invert(80%) sepia(75%) saturate(475%) hue-rotate(8deg)
+    brightness(103%) contrast(103%);
+}
+
+.custom-carousel {
+  height: 400px; /* Adjust this value based on your needs */
+}

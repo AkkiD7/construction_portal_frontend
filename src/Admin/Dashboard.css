@@ -1,0 +1,67 @@
+.admin-dashboard {
+  height: 100vh;
+  padding: 0;
+  padding-top: 60px;
+  overflow-y: auto;
+}
+
+.sidebar {
+  background-color: #000;
+  color: #fff;
+  padding-top: 60px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.sidebar a {
+  color: #fff;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #333;
+}
+
+.content {
+  padding: 20px;
+  margin-left: 250px; 
+}
+
+/* Custom styles for the dropdown items */
+.dropdown-menu .dropdown-item-custom {
+  color: rgb(0, 0, 0) !important;
+  background-color: transparent;
+}
+
+.dropdown-menu .dropdown-item-custom:hover {
+  color: blue !important;
+  background-color: transparent;
+}
+
+
+@media (max-width: 992px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    height: auto;
+    overflow-y: visible;
+  }
+  
+  .content {
+    margin-left: 0;
+    padding-left: 20px;
+  }
+}

@@ -1,0 +1,40 @@
+.services {
+  padding-top: 50px;
+}
+
+.services h1 {
+  font-weight: 600;
+  font-size:38px;
+  font-family: 'Roboto', sans-serif; }
+
+.services .card {
+  transition: box-shadow 0.3s ease;
+}
+
+.services .card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.22);
+}
+
+.services .card-title {
+  position: relative;
+  border-bottom: 2px solid #d6cfcf;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.services .card:hover .card-title {
+  border-color: #F5BF23;
+}
+
+.services .fa-icon {
+  font-size: 35px;
+  color: #000000;
+  transition: transform 0.3s ease;
+}
+
+.services .card:hover .fa-icon {
+  transform: rotate(360deg);
+}

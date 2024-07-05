@@ -1,0 +1,97 @@
+/* constructions.css */
+ .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  
+
+.geeks {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+h1{
+    font-weight: 600;
+    font-size:38px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+.construction-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s all ease-in-out;
+}
+
+.card-item:hover .construction-image {
+    transform: scale(1.2);
+}
+
+@media (max-width: 700px), (min-width: 700px) and (max-width: 1200px) {
+    .card-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px; 
+    }
+
+    .geeks {
+        width: 100%;
+        height: 200px; 
+    }
+
+    .construction-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-body {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .card {
+        flex: 1;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 280px; 
+    }
+
+    .geeks {
+        height: 100%;
+    }
+
+    .construction-image {
+        height: 100%; 
+        width: 100%;
+        object-fit: cover; 
+    }
+
+    .card-body {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .card {
+        flex: 1;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}

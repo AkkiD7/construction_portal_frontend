@@ -1,0 +1,42 @@
+.geeks {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.blog-image {
+  width: 100%;
+  transition: 0.2s all ease-in-out;
+}
+
+.card:hover .blog-image {
+  transform: scale(1.2);
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+}
+
+.blogs-buttons {
+  background-color: #f5bf23;
+  border-color: #f5bf23;
+  color: rgb(0, 0, 0);
+}
+
+.blogs-buttons:hover {
+  background-color: #f5bf23;
+  border-color: #f5bf23;
+  color: rgb(255, 255, 255);
+}
+
+.pagination .page-link {
+  color: #f5bf23;
+  border-color: black;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #f5bf23;
+  border-color: black;
+}
