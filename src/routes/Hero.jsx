@@ -12,7 +12,7 @@ export default function Hero() {
   const [heroContent, setHeroContent] = useState({ heading: '', content: '' });
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/hero')
+    axios.get('https://construction-portal-backend.onrender.com/api/hero')
       .then(response => {
         setHeroContent(response.data);
       })
