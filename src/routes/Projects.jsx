@@ -49,14 +49,14 @@ const Projects = () => {
 
       for (const category of categories) {
         const response = await axios.get(
-          `http://localhost:5000/api/projects/images/${category}`
+          `https://construction-portal-backend.onrender.com/api/projects/images/${category}`
         );
         console.log(`Response for ${category}:`, response.data);
 
         const images = response.data.map((image, index) => ({
           ...image,
           id: `${category}-${index}`,
-          src: `http://localhost:5000/${image.image}`, // Update image path here
+          src: `https://construction-portal-backend.onrender.com/${image.image}`, // Update image path here
         }));
 
         setTabs((prevTabs) =>
