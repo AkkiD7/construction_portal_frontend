@@ -14,7 +14,7 @@ export default function AdminServices() {
 
   const fetchServices = () => {
     axios
-      .get("http://localhost:5000/api/services")
+      .get("https://construction-portal-backend.onrender.com/api/services")
       .then((response) => {
         setServices(response.data);
       })
@@ -32,7 +32,7 @@ export default function AdminServices() {
     e.preventDefault();
     if (editingId) {
       axios
-        .put(`http://localhost:5000/api/services/${editingId}`, form)
+        .put(`https://construction-portal-backend.onrender.com/api/services/${editingId}`, form)
         .then((response) => {
           setServices(
             services.map((service) =>
@@ -46,7 +46,7 @@ export default function AdminServices() {
         .catch((error) => console.error("Error updating service:", error));
     } else {
       axios
-        .post("http://localhost:5000/api/services", form)
+        .post("https://construction-portal-backend.onrender.com/api/services", form)
         .then((response) => {
           setServices([...services, response.data]);
           setForm({ title: "", description: "" });
@@ -64,7 +64,7 @@ export default function AdminServices() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/api/services/${id}`)
+      .delete(`https://construction-portal-backend.onrender.com/api/services/${id}`)
       .then(() => {
         setServices(services.filter((service) => service._id !== id));
       })
