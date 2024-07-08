@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/auth/check-auth", {
+      .get("https://construction-portal-backend.onrender.com/api/auth/check-auth", {
         withCredentials: true,
       })
       .then((response) => {
