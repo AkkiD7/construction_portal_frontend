@@ -24,7 +24,7 @@ const Constructions = () => {
 
   const fetchConstructions = () => {
     axios
-      .get("http://localhost:5000/api/construction")
+      .get("https://construction-portal-backend.onrender.com/api/construction")
       .then((response) => {
         const updatedConstructions = response.data.map((construction) => ({
           ...construction,
