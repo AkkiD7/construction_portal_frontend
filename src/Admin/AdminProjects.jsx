@@ -22,11 +22,11 @@ const AdminProjects = () => {
 
   const fetchImages = (category) => {
     axios
-      .get(`http://localhost:5000/api/projects/images/${category}`)
+      .get(`https://construction-portal-backend.onrender.com/api/projects/images/${category}`)
       .then((response) => {
         const images = response.data.map((image) => ({
           id: image.id,
-          src: `http://localhost:5000/${image.image}`,
+          src: `https://construction-portal-backend.onrender.com/${image.image}`,
           alt: image.title,
         }));
         switch (category) {
@@ -62,7 +62,7 @@ const AdminProjects = () => {
 
       const category = selectedCategory.toLowerCase();
       const response = await axios.post(
-        `http://localhost:5000/api/projects/images/${category}`,
+        `https://construction-portal-backend.onrender.com/api/projects/images/${category}`,
         formData,
         {
           headers: {
@@ -86,7 +86,7 @@ const AdminProjects = () => {
 
       const category = selectedCategory.toLowerCase();
       const response = await axios.put(
-        `http://localhost:5000/api/projects/images/${selectedImageId}/${category}`,
+        `https://construction-portal-backend.onrender.com/api/projects/images/${selectedImageId}/${category}`,
         formData,
         {
           headers: {
@@ -108,7 +108,7 @@ const AdminProjects = () => {
   const handleDeleteImage = async (imageId, category) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/projects/images/${imageId}/${category}`
+        `https://construction-portal-backend.onrender.com/api/projects/images/${imageId}/${category}`
       );
 
       console.log("Image deleted successfully:", response.data);
