@@ -14,7 +14,7 @@ const Dashboard = ({ setIsAdminLoggedIn }) => {
     const fetchAdminEmail = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/admin/admin-email",
+          "https://construction-portal-backend.onrender.com/api/admin/admin-email",
           { withCredentials: true }
         );
         setAdminEmail(response.data.email);
@@ -35,7 +35,7 @@ const Dashboard = ({ setIsAdminLoggedIn }) => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:5000/api/auth/logout", null, {
+      await axios.post("https://construction-portal-backend.onrender.com/api/auth/logout", null, {
         withCredentials: true,
       });
       setIsAdminLoggedIn(false);
