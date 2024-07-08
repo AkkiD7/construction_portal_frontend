@@ -28,7 +28,7 @@ const Constructions = () => {
       .then((response) => {
         const updatedConstructions = response.data.map((construction) => ({
           ...construction,
-          image: `http://localhost:5000/${construction.image}`,
+          image: `https://construction-portal-backend.onrender.com/${construction.image}`,
         }));
         setConstructions(updatedConstructions);
       })
