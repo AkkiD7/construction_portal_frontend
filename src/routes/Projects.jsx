@@ -51,7 +51,7 @@ const Projects = () => {
         const response = await axios.get(
           `https://construction-portal-backend.onrender.com/api/projects/images/${category}`
         );
-        console.log(`Response for ${category}:`, response.data);
+    
 
         const images = response.data.map((image, index) => ({
           ...image,
