@@ -16,7 +16,7 @@ export default function AdminAboutUs() {
 
   const fetchAboutUsContent = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/about-us");
+      const response = await axios.get("https://construction-portal-backend.onrender.com/api/about-us");
       setAboutUsContent(response.data);
     } catch (error) {
       console.error("Error fetching About Us content:", error);
@@ -43,7 +43,7 @@ export default function AdminAboutUs() {
     }
 
     try {
-      await axios.put("http://localhost:5000/api/about-us", formData, {
+      await axios.put("https://construction-portal-backend.onrender.com/api/about-us", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -67,7 +67,7 @@ export default function AdminAboutUs() {
         <p>{aboutUsContent.description}</p>
         {aboutUsContent.image && (
           <Image
-            src={`http://localhost:5000/${aboutUsContent.image}`}
+            src={`https://construction-portal-backend.onrender.com/${aboutUsContent.image}`}
             alt="About Us Image"
             rounded
             style={{ height: "100px", width: "auto" }}
