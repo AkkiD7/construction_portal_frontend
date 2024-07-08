@@ -51,7 +51,7 @@ function App() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Caves Constructions</title>
-        <meta name="description" content="Description of your website" />
+        <meta name="description" content="Caves Construction" />
         {/* Add more meta tags as needed */}
       </Helmet>
       <Navbar isAdminLoggedIn={isAdminLoggedIn} />
