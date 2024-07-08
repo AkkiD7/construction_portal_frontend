@@ -65,12 +65,12 @@ const Dashboard = ({ setIsAdminLoggedIn }) => {
               >
                 Logout
               </Dropdown.Item>
-              <Dropdown.Item
+{/*               <Dropdown.Item
                 className="dropdown-item-custom"
                 onClick={handleChangePassword}
               >
                 Change Password
-              </Dropdown.Item>
+              </Dropdown.Item> */}
             </Dropdown.Menu>
           </Dropdown>
 
