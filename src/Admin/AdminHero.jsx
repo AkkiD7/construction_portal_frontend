@@ -15,7 +15,7 @@ export default function AdminHero() {
 
   const fetchHeroContent = () => {
     axios
-      .get("http://localhost:5000/api/hero")
+      .get("https://construction-portal-backend.onrender.com/api/hero")
       .then((response) => {
         setHeroContent(response.data);
       })
@@ -33,7 +33,7 @@ export default function AdminHero() {
     e.preventDefault();
 
     axios
-      .put("http://localhost:5000/api/hero", heroContent)
+      .put("https://construction-portal-backend.onrender.com/api/hero", heroContent)
       .then(() => {
         setShowModal(false);
       })
