@@ -21,7 +21,7 @@ const Blogs = () => {
      .then((response) =>{
       const updatedBlogs = response.data.map((blog) => ({
         ...blog,
-        image: `http://localhost:5000/${blog.image}`,
+        image: `https://construction-portal-frontend.vercel.app/${blog.image}`,
      }));
       setBlogs(updatedBlogs);
     }).catch ((error) => {
