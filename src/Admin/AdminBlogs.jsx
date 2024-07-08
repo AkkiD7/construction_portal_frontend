@@ -19,11 +19,11 @@ export default function AdminBlogs() {
 
   const fetchBlogs = () => {
     axios
-      .get("http://localhost:5000/api/blogs")
+      .get("https://construction-portal-backend.onrender.com/api/blogs")
       .then((response) => {
         const updatedBlogs = response.data.map((blog) => ({
           ...blog,
-          image: `http://localhost:5000/${blog.image}`,
+          image: `https://construction-portal-backend.onrender.com/${blog.image}`,
         }));
         setBlogs(updatedBlogs);
       })
@@ -51,7 +51,7 @@ export default function AdminBlogs() {
 
     if (editingId) {
       axios
-        .put(`http://localhost:5000/api/blogs/${editingId}`, formData, {
+        .put(`https://construction-portal-backend.onrender.com/api/blogs/${editingId}`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
@@ -61,7 +61,7 @@ export default function AdminBlogs() {
             blog._id === editingId
               ? {
                   ...response.data,
-                  image: `http://localhost:5000/${response.data.image}`,
+                  image: `https://construction-portal-backend.onrender.com/${response.data.image}`,
                 }
               : blog
           );
@@ -74,7 +74,7 @@ export default function AdminBlogs() {
         .catch((error) => console.error("Error updating blog:", error));
     } else {
       axios
-        .post("http://localhost:5000/api/blogs", formData, {
+        .post("https://construction-portal-backend.onrender.com/api/blogs", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
@@ -84,7 +84,7 @@ export default function AdminBlogs() {
             ...blogs,
             {
               ...response.data,
-              image: `http://localhost:5000/${response.data.image}`,
+              image: `https://construction-portal-backend.onrender.com/${response.data.image}`,
             },
           ];
           setBlogs(updatedBlogs);
@@ -104,7 +104,7 @@ export default function AdminBlogs() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/api/blogs/${id}`)
+      .delete(`https://construction-portal-backend.onrender.com/api/blogs/${id}`)
       .then(() => {
         setBlogs(blogs.filter((blog) => blog._id !== id));
       })
