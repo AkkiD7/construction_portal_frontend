@@ -52,7 +52,7 @@ export default function AboutUs() {
             >
               {aboutUsContent.image && (
                 <img
-                  src={`http://localhost:5000/${aboutUsContent.image}`}
+                  src={`https://construction-portal-backend.onrender.com/${aboutUsContent.image}`}
                   alt="About Us"
                   className="img-fluid rounded"
                 />
