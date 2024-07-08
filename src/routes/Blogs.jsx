@@ -17,7 +17,7 @@ const Blogs = () => {
   }, []);
 
   const fetchBlogs =  () => {
-     axios.get("http://localhost:5000/api/blogs")
+     axios.get("https://construction-portal-backend.onrender.com/api/blogs")
      .then((response) =>{
       const updatedBlogs = response.data.map((blog) => ({
         ...blog,
