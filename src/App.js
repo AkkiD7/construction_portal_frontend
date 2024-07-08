@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import axios from "axios";
 import Navbar from "./components/Navbar";
 import Home from "./routes/Home";
@@ -47,6 +48,12 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Caves Constructions</title>
+        <meta name="description" content="Description of your website" />
+        {/* Add more meta tags as needed */}
+      </Helmet>
       <Navbar isAdminLoggedIn={isAdminLoggedIn} />
       <Routes>
         <Route path="/" element={<Home />} />
