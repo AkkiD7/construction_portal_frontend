@@ -18,7 +18,7 @@ export default function Services() {
 
   useEffect(() => {
     // Fetch services data from backend API
-    fetch("http://localhost:5000/api/services")
+    fetch("https://construction-portal-backend.onrender.com/api/services")
       .then((response) => response.json())
       .then((data) => setServicesData(data))
       .catch((error) => console.error("Error fetching services:", error));
