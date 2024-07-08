@@ -20,7 +20,7 @@ export default function AdminConstructions() {
 
   const fetchConstructions = () => {
     axios
-      .get("http://localhost:5000/api/construction")
+      .get("https://construction-portal-backend.onrender.com/api/construction")
       .then((response) => {
         const updatedConstructions = response.data.map((construction) => ({
           ...construction,
@@ -53,7 +53,7 @@ export default function AdminConstructions() {
 
     if (editingId) {
       axios
-        .put(`http://localhost:5000/api/construction/${editingId}`, formData, {
+        .put(`https://construction-portal-backend.onrender.com/api/construction/${editingId}`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
@@ -63,7 +63,7 @@ export default function AdminConstructions() {
             construction._id === editingId
               ? {
                   ...response.data,
-                  image: `http://localhost:5000/${response.data.image}`,
+                  image: `https://construction-portal-backend.onrender.com/${response.data.image}`,
                 }
               : construction
           );
@@ -76,7 +76,7 @@ export default function AdminConstructions() {
         .catch((error) => console.error("Error updating construction:", error));
     } else {
       axios
-        .post("http://localhost:5000/api/construction", formData, {
+        .post("https://construction-portal-backend.onrender.com/api/construction", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
@@ -86,7 +86,7 @@ export default function AdminConstructions() {
             ...constructions,
             {
               ...response.data,
-              image: `http://localhost:5000/${response.data.image}`,
+              image: `https://construction-portal-backend.onrender.com/${response.data.image}`,
             },
           ];
           setConstructions(updatedConstructions);
@@ -106,7 +106,7 @@ export default function AdminConstructions() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/api/construction/${id}`)
+      .delete(`https://construction-portal-backend.onrender.com/api/construction/${id}`)
       .then(() => {
         setConstructions(
           constructions.filter((construction) => construction._id !== id)
