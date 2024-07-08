@@ -20,11 +20,11 @@ export default function AdminTestimonials() {
 
   const fetchTestimonials = () => {
     axios
-      .get("http://localhost:5000/api/testimonials")
+      .get("https://construction-portal-backend.onrender.com/api/testimonials")
       .then((response) => {
         const updatedTestimonials = response.data.map((testimonial) => ({
           ...testimonial,
-          image: `http://localhost:5000/${testimonial.image}`,
+          image: `https://construction-portal-backend.onrender.com/${testimonial.image}`,
         }));
         setTestimonials(updatedTestimonials);
       })
@@ -53,7 +53,7 @@ export default function AdminTestimonials() {
 
     if (editingId) {
       axios
-        .put(`http://localhost:5000/api/testimonials/${editingId}`, formData, {
+        .put(`https://construction-portal-backend.onrender.com/api/testimonials/${editingId}`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
@@ -63,7 +63,7 @@ export default function AdminTestimonials() {
             testimonial._id === editingId
               ? {
                   ...response.data,
-                  image: `http://localhost:5000/${response.data.image}`,
+                  image: `https://construction-portal-backend.onrender.com/${response.data.image}`,
                 }
               : testimonial
           );
@@ -76,7 +76,7 @@ export default function AdminTestimonials() {
         .catch((error) => console.error("Error updating testimonial:", error));
     } else {
       axios
-        .post("http://localhost:5000/api/testimonials", formData, {
+        .post("https://construction-portal-backend.onrender.com/api/testimonials", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
@@ -86,7 +86,7 @@ export default function AdminTestimonials() {
             ...testimonials,
             {
               ...response.data,
-              image: `http://localhost:5000/${response.data.image}`,
+              image: `https://construction-portal-backend.onrender.com/${response.data.image}`,
             },
           ];
           setTestimonials(updatedTestimonials);
@@ -106,7 +106,7 @@ export default function AdminTestimonials() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/api/testimonials/${id}`)
+      .delete(`https://construction-portal-backend.onrender.com/api/testimonials/${id}`)
       .then(() => {
         setTestimonials(testimonials.filter((testimonial) => testimonial._id !== id));
       })
