@@ -21,7 +21,7 @@ export default function AboutUs() {
     });
 
     axios
-      .get("http://localhost:5000/api/about-us")
+      .get("https://construction-portal-backend.onrender.com/api/about-us")
       .then((response) => {
         setAboutUsContent(response.data);
       })
