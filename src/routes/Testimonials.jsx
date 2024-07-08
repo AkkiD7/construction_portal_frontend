@@ -26,7 +26,7 @@ export default function Testimonials() {
         const response = await axios.get("https://construction-portal-backend.onrender.com/api/testimonials");
         const updatedTestimonials = response.data.map((testimonial) => ({
           ...testimonial,
-          image: `https://construction-portal-frontend.vercel.app/${testimonial.image}`,
+          image: `https://construction-portal-backend.onrender.com/${testimonial.image}`,
         }));
         setTestimonials(updatedTestimonials);
       } catch (error) {
