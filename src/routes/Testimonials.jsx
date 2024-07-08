@@ -23,7 +23,7 @@ export default function Testimonials() {
 
     const fetchTestimonials = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/testimonials");
+        const response = await axios.get("https://construction-portal-backend.onrender.com/api/testimonials");
         const updatedTestimonials = response.data.map((testimonial) => ({
           ...testimonial,
           image: `http://localhost:5000/${testimonial.image}`,
